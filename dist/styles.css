@@ -112,8 +112,76 @@
   transition: all 0.3s ease;
 }
 
+/* Hero Section */
+.hero {
+  background-color: #000;
+  background: linear-gradient(to right, #161616, #000);
+  padding: 200px 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero-heading {
+  color: #fff;
+  font-size: 6.25rem;
+  margin-bottom: 24px;
+}
+
+.hero-heading span {
+  background: #ee0979;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 3.75rem;
+  background: #da22ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8f0eff,
+    #da22ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.highlight {
+  border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+/* --------------------------------------------------------------------------- */
 /* Media Queries */
 @media screen and (max-width: 960px) {
+  /* Navbar Section */
   .navbar-container {
     padding: 0;
   }
@@ -197,5 +265,14 @@
 
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Hero Section */
+  .hero-heading {
+    font-size: 3.75rem;
+  }
+
+  .hero-description {
+    font-size: 2.5rem;
   }
 }
