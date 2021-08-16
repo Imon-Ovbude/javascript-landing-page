@@ -1,6 +1,6 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar-menu');
-const navLog = document.querySelector('#navbar-logo');
+const navLogo = document.querySelector('#navbar-logo');
 
 // Display Mobile Menu
 const mobileMenu = () => {
@@ -41,5 +41,18 @@ const highlightMenu = () => {
   }
 };
 
+// Close mobile Menu When Item Is Clicked
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector('.is-active');
+
+  if (window.innerWidth <= 768 && menuBars) {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.remove('active');
+  }
+};
+
+// Call Functions
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
+menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
