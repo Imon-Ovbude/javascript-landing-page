@@ -234,7 +234,7 @@
   border-bottom: 4px solid rgb(132, 0, 255);
 }
 
-/* About Section */
+/* Main Section */
 .main {
   background-color: #131313;
   padding: 10rem 0;
@@ -274,6 +274,18 @@
 .fa-layer-group,
 .fa-users {
   font-size: 14rem;
+}
+
+#card-2 {
+  background: #ff512f;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main-content {
@@ -419,4 +431,74 @@
   .hero-description {
     font-size: 2.5rem;
   }
+
+  /* Main Section */
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90%;
+  }
+
+  .main-image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-image-card {
+    height: 425px;
+    width: 435px;
+  }
+
+  .main-content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main-content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main-content h2 {
+    font-size: 3rem;
+  }
+
+  .main-content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
 }
+
+@media screen and (max-width: 501px) {
+  .main-image-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .fa-users, .fa-layer-group {
+    font-size: 4rem;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main-content h2 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    margin-top: 2rem;
+  }
+
+  .main-button {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}
+
